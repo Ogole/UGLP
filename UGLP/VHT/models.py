@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 import uuid
 class Register_VHT(models.Model):
+    VHTIDN=models.UUIDField(default=uuid.uuid4,editable=False)
     First_Name=models.CharField(max_length=50)
     Last_Name=models.CharField(max_length=50)
     Phone_Number=models.CharField(max_length=15)
@@ -42,7 +43,7 @@ class Register_People(models.Model):
         ('Alive','Alive')
     ]
     Status=models.CharField(STATUS_TYPE_CHOICES, default='Alive',max_length=10 )
-    Attach_BirthCertificate=models.ImageField(upload_to='Birth Certificates')
+    Attach_BirthCertificate=models.ImageField(upload_to='Birth_Certificates')
     Father_Name=models.CharField(max_length=20)
     Mother_Name=models.CharField(max_length=20)
     

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'UGLP',
     'VHT',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
